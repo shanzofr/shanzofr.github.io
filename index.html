@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>S H A N Z O</title>
+<link rel="icon" type="image/png" href="assets/dexter.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="desktop">
+  <div class="desktop-icons">
+    <button class="desktop-icon trash" id="trashIcon"><img class="icon trash-icon" src="assets/icons/recyclebin.png" alt=""><span>Recycle Bin</span></button>
+    <button class="desktop-icon" data-window="about"><img class="icon folder-icon" src="assets/icons/folder.png" alt=""><span>About Me</span></button>
+    <button class="desktop-icon" data-window="projects"><img class="icon folder-icon" src="assets/icons/folder.png" alt=""><span>Projects</span></button>
+    <button class="desktop-icon" data-window="skills"><img class="icon folder-icon" src="assets/icons/folder.png" alt=""><span>Skills</span></button>
+    <button class="desktop-icon" data-window="contact"><img class="icon folder-icon" src="assets/icons/folder.png" alt=""><span>Contact</span></button>
+    <button class="desktop-icon" data-window="media"><img class="icon folder-icon" src="assets/icons/folder.png" alt=""><span>Media</span></button>
+  </div>
+
+  <div id="windows"></div>
+
+  <div id="startMenu" class="start-menu hidden">
+    <div class="start-header"><img class="avatar" src="assets/icons/usericon.png" alt=""><div>Shane</div></div>
+    <div class="start-body">
+      <div class="start-left">
+        <button data-window="about"><img class="menu-folder-icon" src="assets/icons/folder.png" alt=""> About Me</button>
+        <button data-window="projects"><img class="menu-folder-icon" src="assets/icons/folder.png" alt=""> Projects</button>
+        <button data-window="skills"><img class="menu-folder-icon" src="assets/icons/folder.png" alt=""> Skills</button>
+        <button data-window="contact"><img class="menu-folder-icon" src="assets/icons/folder.png" alt=""> Contact</button>
+        <button data-window="media"><img class="menu-folder-icon" src="assets/icons/folder.png" alt=""> Media</button>
+      </div>
+      <div class="start-right">
+        <button type="button" data-start-action="error-sound"><img class="menu-system-icon" src="assets/icons/computer.png" alt=""> My Computer</button><button type="button" data-start-action="error-sound"><img class="menu-system-icon" src="assets/icons/internet.png" alt=""> Internet</button><button type="button" data-start-action="error-sound"><img class="menu-system-icon" src="assets/icons/ControlPanel.png" alt=""> Control Panel</button><button type="button" data-start-action="easter-egg"><img class="menu-system-icon" src="assets/icons/recyclebin.png" alt=""> Recycle Bin</button>
+      </div>
+    </div>
+    <div class="start-footer"><button id="closeStart">Close Menu</button></div>
+  </div>
+
+  <div class="taskbar">
+    <button id="startButton" class="start-button"><span class="windows-logo"><i></i><i></i><i></i><i></i></span><b>start</b></button>
+    <div id="taskButtons" class="task-buttons"></div>
+    <div class="tray"><button id="volumeButton" class="volume-button" aria-label="Volume" aria-expanded="false"><img id="musicStatus" class="tray-icon" src="assets/icons/music-off.png" alt="Music off"></button><div id="volumePopup" class="volume-popup hidden"><label for="volumeSlider">Volume</label><input id="volumeSlider" type="range" min="0" max="100" value="70"></div><span id="clock">00:00</span></div>
+  </div>
+
+  <div id="easterEgg" class="easter-egg hidden"><img id="eggImage" alt="Easter egg"></div>
+  <audio id="siteMusic" autoplay loop preload="auto"><source src="assets/music.mp3" type="audio/mpeg"></audio>
+  <audio id="eggSound" preload="auto"><source src="assets/easter-egg.mp3" type="audio/mpeg"></audio>
+  <audio id="errorSound" preload="auto"><source src="assets/error.mp3" type="audio/mpeg"></audio>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
